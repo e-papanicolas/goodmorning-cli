@@ -1,0 +1,26 @@
+{
+  "name": "goodmorning-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to greet you every morning.",
+  "main": "index.js",
+  "bin": {
+    "goodmorning": "bin/goodmorning"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-papanicolas/goodmorning-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/e-papanicolas/goodmorning-cli/issues"
+  },
+  "homepage": "https://github.com/e-papanicolas/goodmorning-cli#readme",
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
+}
