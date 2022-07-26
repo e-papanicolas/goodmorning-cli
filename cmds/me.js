@@ -10,26 +10,27 @@ module.exports = async (args) => {
     let current = weather[0];
     let forecast = weather[1];
 
-    console.log(`Today in ${locationData.city}, ${locationData.regionCode}:`);
+    console.log(`Today in ${locationData.city}, ${locationData.regionCode}...`);
     console.log(
-      `It is ${current.conditions} and ${current.temp} F, but it feels like ${current.feelsLike} F.`
+      `${current.conditions} and currently ${current.temp} F, but it feels like ${current.feelsLike} F.`
     );
     console.log(
       `Today's low is ${forecast.today.minTemp} F with a high of ${forecast.today.maxTemp} F.`
     );
-    console.log(`Conditions are ${forecast.today.conditions}.`);
     console.log(
-      `Chances of rain are ${forecast.today.chanceOfRain}% and chances of snow are ${forecast.today.chanceOfSnow}%.`
+      `${forecast.today.conditions} throughout the day, a ${forecast.today.chanceOfRain}% chance of rain & a ${forecast.today.chanceOfSnow}% chance of snow.`
     );
+
     console.log(
       `The sun rises today at ${forecast.today.sunrise} and sets at ${forecast.today.sunset}.`
     );
     console.log(`The moon tonight is a ${forecast.today.moonPhase}.`);
+    console.log("As for tomorrow...");
     console.log(
-      `Tomorrow's low is ${forecast.tomorrow.minTemp} F with a high of ${forecast.tomorrow.maxTemp} F.`
+      `A low of ${forecast.tomorrow.minTemp} F with a high of ${forecast.tomorrow.maxTemp} F.`
     );
     console.log(
-      `${forecast.tomorrow.conditions} tomorrow, with an ${forecast.tomorrow.chanceOfRain}% chance of rain & an ${forecast.tomorrow.chanceOfSnow}% chance of snow!`
+      `${forecast.tomorrow.conditions} tomorrow, with a ${forecast.tomorrow.chanceOfRain}% chance of rain & a ${forecast.tomorrow.chanceOfSnow}% chance of snow!`
     );
   } catch (err) {
     console.error(err);
