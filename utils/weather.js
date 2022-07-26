@@ -1,16 +1,13 @@
 module.exports = async (location) => {
-  let api_key = "a7aeea0d9295491c8cd193416222507";
   const currentResponse = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${location}`
+    `http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${location}`
   );
   const forecastResponse = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${location}&days=2`
+    `http://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_API_KEY}&q=${location}&days=2`
   );
 
   const currentResult = await currentResponse.json();
   const forecastResult = await forecastResponse.json();
-
-  // console.log("forecast", forecastResult.forecast.forecastday);
 
   const currentData = {
     temp: currentResult.current.temp_f,

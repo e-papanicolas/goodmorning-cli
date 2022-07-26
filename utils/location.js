@@ -1,6 +1,7 @@
 module.exports = async () => {
-  const key = "b9a79676297caf177dc8dbda71917ce2184b2a2be168cff494c765b7";
-  const response = await fetch(`https://api.ipdata.co?api-key=${key}`);
+  const response = await fetch(
+    `https://api.ipdata.co?api-key=${process.env.IP_API_KEY}`
+  );
 
   const result = await response.json();
   // console.log(result);

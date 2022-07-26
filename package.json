@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/e-papanicolas/goodmorning-cli#readme",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "minimist": "^1.2.6"
   }
 }
