@@ -1,4 +1,4 @@
-module.exports = async () => {
+const getLocation = async () => {
   const response = await fetch(
     `https://api.ipdata.co?api-key=${process.env.IP_API_KEY}`
   );
@@ -17,3 +17,5 @@ module.exports = async () => {
 
   return data;
 };
+
+export default getLocation;

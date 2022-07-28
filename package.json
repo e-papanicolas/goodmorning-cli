@@ -1,11 +1,11 @@
 {
   "name": "goodmorning-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to greet you every morning.",
   "main": "index.js",
   "preferGlobal": true,
   "bin": {
-    "goodmorning": "bin/goodmorning"
+    "goodmorning": "bin/goodmorning.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,5 +27,6 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "minimist": "^1.2.6"
-  }
+  },
+  "type": "module"
 }

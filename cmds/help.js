@@ -12,8 +12,10 @@ const menus = {
     --location, -l ..... the location to use`,
 };
 
-module.exports = (args) => {
+const getHelp = (args) => {
   const subCmd = args._[0] === "help" ? args._[1] : args._[0];
 
   console.log(menus[subCmd] || menus.main);
 };
+
+export default getHelp;

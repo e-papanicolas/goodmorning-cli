@@ -1,7 +1,7 @@
-const getWeather = require("../utils/weather");
-const getLocation = require("../utils/location");
+import getWeather from "../utils/weather.js";
+import getLocation from "../utils/location.js";
 
-module.exports = async (args) => {
+const helloWorld = async (args) => {
   try {
     const locationData = await getLocation();
 
@@ -37,7 +37,4 @@ module.exports = async (args) => {
   }
 };
 
-// say hi
-// get current time and current weather
-// things i have to do today
-// things on the calendar later this week
+export default helloWorld;
