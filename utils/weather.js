@@ -1,4 +1,4 @@
-module.exports = async (location) => {
+const getWeather = async (location) => {
   const currentResponse = await fetch(
     `http://api.weatherapi.com/v1/current.json?key=${process.env.WEATHER_API_KEY}&q=${location}`
   );
@@ -41,3 +41,5 @@ module.exports = async (location) => {
 
   return [currentData, forecastData];
 };
+
+export default getWeather;

@@ -9,6 +9,6 @@
 ## How to get started
 
 First, run `npm install goodmorning-cli` <br>
-Then run `goodmorning me` <br>
+Then run `goodmorning world` <br>
 
 That's it!

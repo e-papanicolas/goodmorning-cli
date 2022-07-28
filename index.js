@@ -1,22 +1,27 @@
-const minimist = require("minimist");
-const error = require("./utils/error");
-require("dotenv").config();
+import minimist from "minimist";
+import error from "./utils/error.js";
+import dotenv from "dotenv";
+import world from "./cmds/world.js";
+import version from "./cmds/version.js";
+import help from "./cmds/help.js";
 
-module.exports = () => {
+dotenv.config();
+
+const commands = () => {
   const args = minimist(process.argv.slice(2));
   const cmd = args._[0];
 
   switch (cmd) {
-    case "me":
-      require("./cmds/me")(args);
+    case "world":
+      world(args);
       break;
 
     case "version":
-      require("./cmds/version")(args);
+      version(args);
       break;
 
     case "help":
-      require("./cmds/help")(args);
+      help(args);
       break;
 
     default:
@@ -24,3 +29,5 @@ module.exports = () => {
       break;
   }
 };
+
+export default commands;
